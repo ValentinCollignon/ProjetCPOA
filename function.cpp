@@ -1,4 +1,5 @@
 #include "header.hpp"
+using namespace std;
 
 /*
   split permet de casser un string  suivant un séparateur donné en plusieurs string

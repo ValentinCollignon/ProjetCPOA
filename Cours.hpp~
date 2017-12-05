@@ -1,0 +1,13 @@
+class Cours
+{
+  string Nom;
+  vector<int> DateDebut;
+  vector<int> DateFin;
+  string Description;
+protected:
+  Cours(){}
+  Cours(string cours, vector<int> debut, vector<int> fin, string desc) : Nom(cours), DateDebut(debut), DateFin(fin), Description(desc) {}
+public:
+  virtual ~Cours() {}
+  virtual string nom() { return Nom; }
+};

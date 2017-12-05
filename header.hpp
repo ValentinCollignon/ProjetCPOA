@@ -9,30 +9,30 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 /* Liste des fonctions */
-vector<string> split(string texte, char separateur);
-bool dateValide(vector<int> date);
-vector<int> resetInt(vector<int> tabDynamique);
-vector<int> tabStringToInt(vector<string> tabString, vector<int> tabInt);
-bool dateJuste(vector<int> date);
-bool dateComparaison(vector<int> dateDeb, vector<int> dateFin);
-string supprimerEspace(string texte);
+std::vector<std::string> split(std::string texte, char separateur);
+bool dateValide(std::vector<int> date);
+std::vector<int> resetInt(std::vector<int> tabDynamique);
+std::vector<int> tabStringToInt(std::vector<std::string> tabString, std::vector<int> tabInt);
+bool dateJuste(std::vector<int> date);
+bool dateComparaison(std::vector<int> dateDeb, std::vector<int> dateFin);
+std::string supprimerEspace(std::string texte);
 
 /* Liste des classes */
 class Cours
 {
-  string Nom;
-  vector<int> DateDebut;
-  vector<int> DateFin;
-  string Description;
+private:
+  std::string nom;
+  std::vector<int> dateDebut;
+  std::vector<int> dateFin;
+  std::string description;
 protected:
-  Cours(){}
-  Cours(string cours, vector<int> debut, vector<int> fin, string desc) : Nom(cours), DateDebut(debut), DateFin(fin), Description(desc) {}
+  
 public:
-  virtual ~Cours() {}
-  virtual string nom() { return Nom; }
+  Cours();
+  Cours(std::string cours, std::vector<int> debut, std::vector<int> fin, std::string desc);
+  ~Cours();
+  std::string getNom() const;
 };
 
 #endif

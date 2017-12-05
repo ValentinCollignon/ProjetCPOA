@@ -1,4 +1,5 @@
 #include "header.hpp"
+using namespace std;
 
 int main(int argc, char *argv[])
 {
@@ -6,7 +7,6 @@ int main(int argc, char *argv[])
   vector<string> dateDebSplit, dateFinSplit;
   vector<int> dateDebSplitInt(1), dateFinSplitInt(1);
   bool dateDebCorrect, dateFinCorrect, dateDebCoherente, dateFinCoherente;
-  Cours cours;
 
   //On demande le nom du cours
   do
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
     cout << "La description du cours est : " << description << endl ;
   }
 
-  cours = new Cours(coursSansEspace, dateDebSplitInt, dateFinSplitInt, descriptionSansEspace);
+  Cours cours(coursSansEspace, dateDebSplitInt, dateFinSplitInt, descriptionSansEspace);
   
 
 
