@@ -1,4 +1,5 @@
 TEST	= projet.cpp function.cpp cours.cpp
+
 FILES	= header.hpp $(TEST)
 
 test:	$(FILES)
