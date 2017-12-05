@@ -209,3 +209,18 @@ bool dateComparaison(vector<int> dateDeb, vector<int> dateFin)
 
   return resultat;
 }
+
+string supprimerEspace(string texte)
+{
+  string resultat = "";
+  cout << "Avec espace : " << texte << endl;
+  for(int i=0; i < texte.lenght; i++)
+  {
+    if(texte[i] != " ")
+    {
+      resultat += texte[i];
+    }
+  }
+  cout << "Sans espace : " << resultat << endl;
+  return resultat
+}

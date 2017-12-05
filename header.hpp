@@ -17,6 +17,6 @@ vector<int> resetInt(vector<int> tabDynamique);
 vector<int> tabStringToInt(vector<string> tabString, vector<int> tabInt);
 bool dateJuste(vector<int> date);
 bool dateComparaison(vector<int> dateDeb, vector<int> dateFin);
-string supprimeEspace(string texte);
+string supprimerEspace(string texte);
 
 #endif

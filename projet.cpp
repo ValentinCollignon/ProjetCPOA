@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[])
 {
-  string nomCours, dateDebut, dateFin, description;
+  string nomCours, coursSansEspace, dateDebut, dateFin, description;
   vector<string> dateDebSplit, dateFinSplit;
   vector<int> dateDebSplitInt(1), dateFinSplitInt(1);
   bool dateDebCorrect, dateFinCorrect, dateDebCoherente, dateFinCoherente;
@@ -11,12 +11,15 @@ int main(int argc, char *argv[])
   {
     cout << "Nom du cours : ";
     getline(cin, nomCours);
-    if (nomCours == "")
+    cout << "Avec espace : " << texte << endl;
+    coursSansEspace = supprimerEspace(nomCours);
+    cout << "Sans espace : " << resultat << endl;
+    if (coursSansEspace == "")
     {
       cout << "Le cours doit avoir un nom" << endl ;
     }
   }
-  while (nomCours == "");
+  while (coursSansEspace == "");
 
   do
   {
