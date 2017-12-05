@@ -3,10 +3,9 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QTextEdit>
+#include <mainwindow.h>
 
-void test(){
-    cout<< "ok!!!"<<endl;
-}
+
 
 int main (int argc ,char ** argv)
 {
