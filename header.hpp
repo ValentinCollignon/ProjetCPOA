@@ -33,6 +33,7 @@ public:
   Cours(std::string cours, std::vector<int> debut, std::vector<int> fin, std::string desc);
   ~Cours();
   std::string getNom() const;
+  std::string toString() const;
 };
 
 #endif

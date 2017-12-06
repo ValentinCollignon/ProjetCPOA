@@ -16,4 +16,10 @@ Cours::~Cours()
 string Cours::getNom() const
 {
   return nom;
-};
+}
+
+string Cours::toString() const
+{
+  return "A finir";
+}
+;
