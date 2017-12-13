@@ -87,6 +87,7 @@ int main(int argc, char *argv[])
 
   Cours cours(coursSansEspace, dateDebSplitInt, dateFinSplitInt, descriptionSansEspace);
   cout << "Nom du cours : " << cours.getNom() << endl;
+  cout << cours.toString() << endl;
   
 
 

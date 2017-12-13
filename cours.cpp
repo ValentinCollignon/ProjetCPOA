@@ -20,6 +20,11 @@ string Cours::getNom() const
 
 string Cours::toString() const
 {
-  return "A finir";
+  string res = "Vous avez créé le cours "+nom+" qui commence le "+dateDebut[0]+"/"+dateDebut[1]+"/"dateDebut[2]+" et termine le "+dateFin[0]+"/"+dateFin[1]+"/"+dateFin[2]+". ";
+  if (description != "")
+  {
+    res += description;
+  }
+  return res;
 }
 ;
