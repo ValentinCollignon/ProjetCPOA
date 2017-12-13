@@ -1,7 +1,0 @@
-#include "header.hpp"
-using namespace std;
-
-string Cours::getNom()
-{
-  return nom;
-}
