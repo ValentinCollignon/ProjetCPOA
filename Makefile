@@ -46,9 +46,11 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = main.cpp \
-		mainwindow.cpp moc_mainwindow.cpp
+		mainwindow.cpp \
+		vueajoutcours.cpp moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
+		vueajoutcours.o \
 		moc_mainwindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
@@ -274,7 +276,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/projet_cpoa1.0.0 || mkdir -p .tmp/projet_cpoa1.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents header.hpp mainwindow.h .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents main.cpp mainwindow.cpp .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents mainwindow.ui .tmp/projet_cpoa1.0.0/ && (cd `dirname .tmp/projet_cpoa1.0.0` && $(TAR) projet_cpoa1.0.0.tar projet_cpoa1.0.0 && $(COMPRESS) projet_cpoa1.0.0.tar) && $(MOVE) `dirname .tmp/projet_cpoa1.0.0`/projet_cpoa1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/projet_cpoa1.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents header.hpp mainwindow.h vueajoutcours.h .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents main.cpp mainwindow.cpp vueajoutcours.cpp .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents mainwindow.ui .tmp/projet_cpoa1.0.0/ && (cd `dirname .tmp/projet_cpoa1.0.0` && $(TAR) projet_cpoa1.0.0.tar projet_cpoa1.0.0 && $(COMPRESS) projet_cpoa1.0.0.tar) && $(MOVE) `dirname .tmp/projet_cpoa1.0.0`/projet_cpoa1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/projet_cpoa1.0.0
 
 
 clean:compiler_clean 
@@ -734,6 +736,9 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		/usr/include/qt5/QtGui/qtextdocument.h \
 		/usr/include/qt5/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
+
+vueajoutcours.o: vueajoutcours.cpp vueajoutcours.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o vueajoutcours.o vueajoutcours.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

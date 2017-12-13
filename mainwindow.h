@@ -18,9 +18,12 @@ public:
 
 private slots:
         void test();
+        void ajoutcours();
+        void acceuil() ;
 
 private:
     Ui::MainWindow *ui;
+    int i;
 
 
 };
