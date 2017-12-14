@@ -214,12 +214,18 @@ bool dateComparaison(vector<int> dateDeb, vector<int> dateFin)
 string supprimerEspace(string texte)
 {
   string resultat = "";
-  for(unsigned int i=0; i < texte.size(); i++)
+  unsigned int i = 0, j = texte.size();
+  while (texte[i] == ' ')
   {
-    if(texte[i] != ' ')
-    {
-      resultat += texte[i];
-    }
+    i++;
+  }
+  while (texte[j-1] == ' ')
+  {
+    j--;
+  }
+  for(i=i ; i < j ; i++)
+  {
+    resultat += texte[i];
   }
   return resultat;
 }

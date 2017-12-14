@@ -75,19 +75,9 @@ int main(int argc, char *argv[])
   cout << "Description : ";
   getline(cin, description);
   descriptionSansEspace = supprimerEspace(description); //On supprime les espaces pour éviter une description 'vide'
-  cout << "Vous avez créé le cours " << nomCours << " qui commence le " << dateDebSplitInt[0] << "/" << dateDebSplitInt[1] << "/" << dateDebSplitInt[2] << " et termine le " << dateFinSplitInt[0] << "/" << dateFinSplitInt[1] << "/" << dateFinSplitInt[2] << ". ";
-  if (descriptionSansEspace == "")
-  {
-    cout << "Il n'y a pas de description pour ce cours." << endl;
-  }
-  else
-  {
-    cout << "La description du cours est : " << description << endl ;
-  }
-
+  
   Cours cours(coursSansEspace, dateDebSplitInt, dateFinSplitInt, descriptionSansEspace);
-  cout << "Nom du cours : " << cours.getNom() << endl;
-  //cout << cours.toString() << endl;
+  cout << cours.toString() << endl;
   
 
 

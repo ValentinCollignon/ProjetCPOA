@@ -20,13 +20,13 @@ string Cours::getNom() const
 
 string Cours::toString() const
 {
-  /*
-  string res = "Vous avez créé le cours "+nom+" qui commence le "+dateDebut[0]+"/"+dateDebut[1]+"/"dateDebut[2]+" et termine le "+dateFin[0]+"/"+dateFin[1]+"/"+dateFin[2]+". ";
+  stringstream sstm;
+  sstm << "Vous avez créé le cours " << nom << " qui commence le " << dateDebut[0] << "/" << dateDebut[1] << "/" << dateDebut[2] << " et termine le " << dateFin[0] << "/" << dateFin[1] << "/" << dateFin[2] << ". ";
   if (description != "")
   {
-    res += description;
+    sstm << "La description du cours est : " << description;
   }
-  */
-  return "";
+  
+  return sstm.str();
 }
 ;
