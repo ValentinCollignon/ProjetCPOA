@@ -85,12 +85,12 @@ bool dateValide(vector<int> date)
 	  jour[1] = 29;
 	}
       }
-    }
-    //Si le jour n'est pas compris entre 1 et le nombre du jour du mois
-    if (date[0] < 1 || date[0] > jour[date[1]-1])
-    {
-      resultat = false;
-      cout << "Le jour est faux" << endl;
+      //Si le jour n'est pas compris entre 1 et le nombre du jour du mois
+      if (date[0] < 1 || date[0] > jour[date[1]-1])
+      {
+	resultat = false;
+	cout << "Le jour est faux" << endl;
+      }
     }
     //Si l'année est inférieur ou égal à 0 on considère qu'elle est incorrecte
     if (date[2] <= 0)
