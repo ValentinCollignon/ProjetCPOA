@@ -9,7 +9,9 @@
 
 int main (int argc ,char ** argv)
 {
+
     QApplication app(argc,argv);
+    Modele m;
     /*QWidget fenetre;
     fenetre.setFixedSize(400, 300);
 
@@ -36,6 +38,9 @@ int main (int argc ,char ** argv)
 
     QObject::connect(bouton, SIGNAL(clicked()), this, SLOT(test()));*/
     MainWindow fenetre;
+    fenetre.addModele(m);
+
+    m.addVue(fenetre);
     fenetre.show();
 
     return app.exec();

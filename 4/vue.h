@@ -6,11 +6,11 @@ class Vue
 {
 public:
     Vue();
-
+    virtual void maj() = 0;
+    void addModele(Modele& m);
 protected:
-    Modele m;
+    Modele modele;
 
-    void maj();
 };
 
 #endif // VUE_H

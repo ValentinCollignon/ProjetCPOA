@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>803</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,9 +24,23 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
-    <widget class="QWidget" name="page"/>
+    <widget class="QWidget" name="page">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>100</y>
+        <width>120</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>GroupBox</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="page_2">
      <widget class="QLineEdit" name="lineEdit_3">
       <property name="geometry">
@@ -68,7 +82,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Description * :</string>
+       <string>Description  :</string>
       </property>
      </widget>
      <widget class="Line" name="line_2">
@@ -186,6 +200,21 @@
       </property>
      </widget>
     </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QLabel" name="nameCours">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>30</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ss</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
@@ -213,17 +242,17 @@
      <string>ajout de cours</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="test">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>210</x>
       <y>50</y>
-      <width>99</width>
+      <width>111</width>
       <height>27</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>liste de cours</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_5">
@@ -284,7 +313,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>803</width>
      <height>25</height>
     </rect>
    </property>

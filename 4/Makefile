@@ -48,11 +48,13 @@ OBJECTS_DIR   = ./
 SOURCES       = main.cpp \
 		mainwindow.cpp \
 		modele.cpp \
-		vue.cpp moc_mainwindow.cpp
+		vue.cpp \
+		function.cpp moc_mainwindow.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		modele.o \
 		vue.o \
+		function.o \
 		moc_mainwindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
@@ -278,7 +280,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d .tmp/projet_cpoa1.0.0 || mkdir -p .tmp/projet_cpoa1.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents header.hpp mainwindow.h modele.h vue.h .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents main.cpp mainwindow.cpp modele.cpp vue.cpp .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents mainwindow.ui .tmp/projet_cpoa1.0.0/ && (cd `dirname .tmp/projet_cpoa1.0.0` && $(TAR) projet_cpoa1.0.0.tar projet_cpoa1.0.0 && $(COMPRESS) projet_cpoa1.0.0.tar) && $(MOVE) `dirname .tmp/projet_cpoa1.0.0`/projet_cpoa1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/projet_cpoa1.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents header.hpp mainwindow.h modele.h vue.h .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents main.cpp mainwindow.cpp modele.cpp vue.cpp function.cpp .tmp/projet_cpoa1.0.0/ && $(COPY_FILE) --parents mainwindow.ui .tmp/projet_cpoa1.0.0/ && (cd `dirname .tmp/projet_cpoa1.0.0` && $(TAR) projet_cpoa1.0.0.tar projet_cpoa1.0.0 && $(COMPRESS) projet_cpoa1.0.0.tar) && $(MOVE) `dirname .tmp/projet_cpoa1.0.0`/projet_cpoa1.0.0.tar.gz . && $(DEL_FILE) -r .tmp/projet_cpoa1.0.0
 
 
 clean:compiler_clean 
@@ -415,6 +417,8 @@ moc_mainwindow.cpp: /usr/include/qt5/QtWidgets/QMainWindow \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		/usr/include/qt5/QtWidgets/qtabwidget.h \
 		/usr/include/qt5/QtGui/qicon.h \
+		vue.h \
+		modele.h \
 		mainwindow.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) $(INCPATH) -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
@@ -570,7 +574,9 @@ main.o: main.cpp /usr/include/qt5/QtWidgets/QApplication \
 		mainwindow.h \
 		/usr/include/qt5/QtWidgets/QMainWindow \
 		/usr/include/qt5/QtWidgets/qmainwindow.h \
-		/usr/include/qt5/QtWidgets/qtabwidget.h
+		/usr/include/qt5/QtWidgets/qtabwidget.h \
+		vue.h \
+		modele.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -685,6 +691,8 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		/usr/include/qt5/QtGui/qtouchdevice.h \
 		/usr/include/qt5/QtWidgets/qtabwidget.h \
 		/usr/include/qt5/QtGui/qicon.h \
+		vue.h \
+		modele.h \
 		ui_mainwindow.h \
 		/usr/include/qt5/QtCore/QVariant \
 		/usr/include/qt5/QtWidgets/QAction \
@@ -744,8 +752,12 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 modele.o: modele.cpp modele.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o modele.o modele.cpp
 
-vue.o: vue.cpp vue.h
+vue.o: vue.cpp vue.h \
+		modele.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o vue.o vue.cpp
+
+function.o: function.cpp header.hpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o function.o function.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
