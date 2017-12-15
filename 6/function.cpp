@@ -213,19 +213,32 @@ bool dateComparaison(vector<int> dateDeb, vector<int> dateFin)
 
 string supprimerEspace(string texte)
 {
+  string tmp = "";
   string resultat = "";
-  unsigned int i = 0, j = texte.size();
-  while (texte[i] == ' ')
+  for (unsigned int i = 0 ; i < texte.size() ; i++)
   {
-    i++;
+    if (texte[i] != ' ')
+    {
+      tmp += texte[i];
+    }
   }
-  while (texte[j-1] == ' ')
+  
+  if (tmp != "")
   {
-    j--;
+    unsigned int i = 0, j = texte.size();
+    while (texte[i] == ' ')
+    {
+      i++;
+    }
+    while (texte[j-1] == ' ')
+    {
+      j--;
+    }
+    for(i=i ; i < j ; i++)
+    {
+      resultat += texte[i];
+    }
   }
-  for(i=i ; i < j ; i++)
-  {
-    resultat += texte[i];
-  }
+  
   return resultat;
 }

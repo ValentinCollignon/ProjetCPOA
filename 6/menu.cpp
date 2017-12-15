@@ -26,7 +26,7 @@ int main()
 	  perror("Creation du fils impossible !\n");
 	  exit(EXIT_FAILURE);
         case (pid_t) 0 :
-	  execl("./connexion", "./connexion", NULL);
+	  execl("./connexion", "./connexion",  NULL);
 	  perror("Recouvrement impossible !");
 	  exit(EXIT_FAILURE);
         default:
