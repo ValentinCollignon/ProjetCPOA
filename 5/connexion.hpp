@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 /* Liste des classes */
 class Utilisateur

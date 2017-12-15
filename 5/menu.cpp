@@ -19,7 +19,18 @@ int main()
     getline(cin, rep);
     if (rep == "1")
     {
-      cout << "Connexion" << endl << endl;
+      switch (fork())
+      {
+        case (pid_t) -1 :
+	  perror("Creation du fils impossible !\n");
+	  exit(EXIT_FAILURE);
+        case (pid_t) 0 :
+	  execl("./connexion", "./connexion", NULL);
+	  perror("Recouvrement impossible !");
+	  exit(EXIT_FAILURE);
+        default:
+	  wait(NULL);
+      }
     }
     else if (rep == "2")
     {
