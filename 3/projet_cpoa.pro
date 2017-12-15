@@ -8,9 +8,7 @@ INCLUDEPATH += .
 QT += core gui widgets
 
 # Input
-HEADERS += header.hpp mainwindow.h \
-    vueajoutcours.h
+HEADERS += header.hpp mainwindow.h
 FORMS += mainwindow.ui
 SOURCES +=  main.cpp \
-    mainwindow.cpp \
-    vueajoutcours.cpp
+    mainwindow.cpp
