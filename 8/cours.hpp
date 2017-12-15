@@ -34,6 +34,9 @@ public:
   Cours(std::string cours, std::vector<int> debut, std::vector<int> fin, std::string desc);
   ~Cours();
   std::string getNom() const;
+  std::vector<int> getDebut() const;
+  std::vector<int> getFin() const;
+  std::string getDescription() const;
   std::string toString() const;
 };
 

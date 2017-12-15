@@ -18,13 +18,28 @@ string Cours::getNom() const
   return nom;
 }
 
+vector<int> Cours::getDebut() const
+{
+  return dateDebut;
+}
+
+vector<int> Cours::getFin() const
+{
+  return dateFin;
+}
+
+string Cours::getDescription() const
+{
+  return description;
+}
+
 string Cours::toString() const
 {
   stringstream sstm;
-  sstm << "Vous avez créé le cours " << nom << " qui commence le " << dateDebut[0] << "/" << dateDebut[1] << "/" << dateDebut[2] << " et termine le " << dateFin[0] << "/" << dateFin[1] << "/" << dateFin[2] << ". ";
+  sstm << "Le cours " << nom << " commence le " << dateDebut[0] << "/" << dateDebut[1] << "/" << dateDebut[2] << " et termine le " << dateFin[0] << "/" << dateFin[1] << "/" << dateFin[2] << ". ";
   if (description != "")
   {
-    sstm << "La description du cours est : " << description;
+    sstm << "La description de ce cours est : " << description;
   }
   
   return sstm.str();
