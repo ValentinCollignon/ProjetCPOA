@@ -4,6 +4,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
   vector<Cours> tab;
+  string rep;
 
   cout << "Voici la liste des cours en attente :" << endl;
   ifstream fichier("../cours_attente.txt", ios::in);
@@ -27,6 +28,8 @@ int main(int argc, char *argv[])
     }
     fichier.close();
   }
+  
+  getline(cin, rep);
 
 
 
