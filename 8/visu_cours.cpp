@@ -21,7 +21,7 @@ int main(int argc, char** argv)
       tab.push_back(Cours(contenu[0], debutInt, finInt, contenu[3]));
     }
     fichier.close();
-    for (int i = 0 ; i < tab.size() ; i++)
+    for (unsigned int i = 0 ; i < tab.size() ; i++)
     {
       cout << i+1 << " - " << tab[i].getNom() << endl;
     }
