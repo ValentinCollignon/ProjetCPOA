@@ -17,9 +17,12 @@ public:
     ~MainWindow();
 
 private slots:
-        void test();
         void ajoutcours();
         void acceuil() ;
+        void listeCours();
+        void coursAttente();
+        void Conncexion();
+        void inscription();
 
 private:
     Ui::MainWindow *ui;
