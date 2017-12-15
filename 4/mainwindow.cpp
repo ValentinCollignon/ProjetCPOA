@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     i=0;
 }
 
-void Vue::addModele(Modele &m)
+void MainWindow::addModele(Modele &m)
 {
     modele=m;
 }

@@ -104,8 +104,6 @@ void *MainWindow::qt_metacast(const char *_clname)
     if (!_clname) return 0;
     if (!strcmp(_clname, qt_meta_stringdata_MainWindow.stringdata))
         return static_cast<void*>(const_cast< MainWindow*>(this));
-    if (!strcmp(_clname, "Vue"))
-        return static_cast< Vue*>(const_cast< MainWindow*>(this));
     return QMainWindow::qt_metacast(_clname);
 }
 
