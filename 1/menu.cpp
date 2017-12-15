@@ -1,5 +1,13 @@
 #include "menu.hpp"
-
+/**
+ * \file      menu.cpp
+ * \author    COLLIGNON LOSSON FOUSSE
+ * \version   0.0
+ * \date      11/12/2017
+ * \brief     Debut de l'appli.
+ *
+ * \details   Créé un menu de l'application sous terminale
+ */
 using namespace std;
 
 int main()

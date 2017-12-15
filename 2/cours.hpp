@@ -8,6 +8,14 @@
 #include <sstream>
 #include <string>
 #include <vector>
+/**
+ * \file      cours.hpp
+ * \author    COLLIGNON LOSSON FOUSSE
+ * \version   0.1
+ * \date      11/12/2017
+ * \brief     header de cours.cpp  et function.cpp
+ *
+ */
 
 /* Liste des fonctions */
 std::vector<std::string> split(std::string texte, char separateur);
