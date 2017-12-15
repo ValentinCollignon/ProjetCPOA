@@ -11,9 +11,10 @@ int main()
     cout << endl << "Bienvenue sur Arch" << endl << endl;
     cout << "Que voulez-vous faire ?" << endl;
     cout << "1 - Connexion" << endl;
-    cout << "2 - Proposer un cours" << endl;
-    cout << "3 - Visualiser les cours en attente" << endl;
-    cout << "4 - Voir les cours disponibles" << endl;
+    cout << "2 - Inscription" << endl;
+    cout << "3 - Proposer un cours" << endl;
+    cout << "4 - Visualiser les cours en attente" << endl;
+    cout << "5 - Voir les cours disponibles" << endl;
     cout << "0 - Quitter" << endl;
   
     getline(cin, rep);
@@ -25,7 +26,7 @@ int main()
 	  perror("Creation du fils impossible !\n");
 	  exit(EXIT_FAILURE);
         case (pid_t) 0 :
-	  execl("./connexion", "./connexion", NULL);
+	  execl("./connexion", "./connexion",  NULL);
 	  perror("Recouvrement impossible !");
 	  exit(EXIT_FAILURE);
         default:
@@ -33,6 +34,10 @@ int main()
       }
     }
     else if (rep == "2")
+    {
+      cout << "Inscription" << endl << endl;
+    }
+    else if (rep == "3")
     {
       switch (fork())
       {
@@ -47,11 +52,11 @@ int main()
 	  wait(NULL);
       }
     }
-    else if (rep == "3")
+    else if (rep == "4")
     {
       cout << "Voilà" << endl << endl;
     }
-    else if (rep == "4")
+    else if (rep == "5")
     {
       cout << "Tada" << endl << endl;
     }
