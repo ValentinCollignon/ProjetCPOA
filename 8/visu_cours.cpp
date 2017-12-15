@@ -23,8 +23,16 @@ int main(int argc, char** argv)
     fichier.close();
     for (unsigned int i = 0 ; i < tab.size() ; i++)
     {
-      cout << i+1 << " - " << tab[i].getNom() << endl;
+      cout << tab[i].getNom() << endl;
     }
-    
+    cout << "Lequel voulez-vous voir ?" << endl;
+    getline(cin, ligne);
+    for (unsigned int i = 0 ; i < tab.size() ; i++)
+    {
+      if (ligne == tab[i].getNom())
+      {
+	cout << tab[i].toString() << endl;
+      }
+    }
   }
 }

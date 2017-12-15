@@ -78,7 +78,16 @@ int main()
     }
     else if (rep == "3" && admin)
     {
-      cout << "Voilà" << endl << endl;
+      switch (fork())
+      {
+        case (pid_t) -1 :
+	  perror("Creation du fils impossible !\n");
+        case (pid_t) 0 :
+	  execl("./gestion_cours", "./gestion_cours", NULL);
+	  perror("Recouvrement impossible !");
+        default:
+	  wait(NULL);
+      }
     }
     else if (rep == "4" && prof)
     {
@@ -95,7 +104,16 @@ int main()
     }
     else if (rep == "5" && etud)
     {
-      cout << "Tada" << endl << endl;
+      switch (fork())
+      {
+        case (pid_t) -1 :
+	  perror("Creation du fils impossible !\n");
+        case (pid_t) 0 :
+	  execl("./visu_cours", "./visu_cours", NULL);
+	  perror("Recouvrement impossible !");
+        default:
+	  wait(NULL);
+      }
     }
     else if (rep == "6" && rang != 0)
     {
