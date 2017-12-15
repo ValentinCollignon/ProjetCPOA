@@ -1,5 +1,5 @@
 #include "cours.hpp"
-using namespace stp;
+using namespace std;
 
 int main(int argc, char** argv)
 {
