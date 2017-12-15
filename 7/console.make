@@ -9,5 +9,5 @@ proposer_cours:	clean $(FILES)
 	g++ -Wall -std=c++11 -ansi utilisateur.cpp inscription.cpp -o inscription
 
 clean:
-	rm -rf menu proposer_cours connexion
+	rm -rf menu proposer_cours connexion inscription
 
