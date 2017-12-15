@@ -1,4 +1,4 @@
-TEST	= proposer_cours.cpp function.cpp cours.cpp gestion_cours.cpp visu_cours.cpp
+TEST	= proposer_cours.cpp function.cpp cours.cpp
 
 FILES	= cours.hpp $(TEST)
 
