@@ -1,6 +1,15 @@
 #include "cours.hpp"
 using namespace std;
-
+/**
+ * \file      function.cpp
+ * \author    COLLIGNON LOSSON FOUSSE
+ * \version   0.1
+ * \date      11/12/2017
+ * \brief     fichier servant à \a valider un cours
+ *
+ * \details   Fichier contenant toutes les fonctions permettant
+ * 		de vérifier si un cours est valide pendant l'ajout d'un cours.
+ */
 /*
   split permet de casser un string  suivant un séparateur donné en plusieurs string
 */

@@ -3,13 +3,13 @@
 
 #include <QMainWindow>
 #include <iostream>
-#include "vue.h"
+#include "modele.h"
 
 namespace Ui {
 class MainWindow ;
 }
 
-class MainWindow : public QMainWindow, public Vue
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow, public Vue
 public:
     explicit MainWindow(QWidget *parent = 0);
     void maj();
+    void addModele(Modele& m);
     ~MainWindow();
 
 private slots:
@@ -30,6 +31,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Modele modele;
     int i;
 
 

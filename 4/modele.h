@@ -4,18 +4,19 @@
 #include <QVector>
 #include <QString>
 
-class Vue;
+class MainWindow;
 
 class Modele
 {
 public:
     Modele();
-    void addVue(Vue &v);
+    void addVue(MainWindow &v);
     void setNameCours(QString s);
     QString getNameCours();
 
 private:
-  QVector<Vue*> vues;
+
+  QVector<MainWindow*> vues;
   QString nameCours;
 
   void maj();

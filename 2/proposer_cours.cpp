@@ -1,6 +1,15 @@
 #include "cours.hpp"
 using namespace std;
-
+/**
+ * \file      proposer_cours.cpp
+ * \author    COLLIGNON LOSSON FOUSSE
+ * \version   0.1
+ * \date      11/12/2017
+ * \brief     fichier servant à ajouter un cours dans l'appli
+ *
+ * \details   Fichier qui demande plusieurs informations pour pouvoir ajouter un cours
+ * 		dans l'application, vérifie que les informations.
+ */
 int main(int argc, char *argv[])
 {
   string nomCours, coursSansEspace, dateDebut, dateFin, description, descriptionSansEspace;
