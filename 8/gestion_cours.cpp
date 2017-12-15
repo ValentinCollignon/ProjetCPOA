@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     }
     for (unsigned int i = 0 ; i < tab.size() ; i++)
     {
-      cout << i+1 <<" - " << tab[i].getNom() << endl;
+      cout << tab[i].getNom() << endl;
     }
     fichier.close();
   }
